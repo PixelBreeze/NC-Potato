@@ -13,7 +13,7 @@ var colorH = '#FF002D'; //color Host
   $('body').append('<style> .uname.rank-4 {color:' + colorCH + ' !important} </style>')
   $('body').append('<style> .uname.rank-5 {color:' + colorH + ' !important} </style>')
   //some more shiz
-    $('.navbar.footer').append('<div id="ncsbutton">NCS</div>')
+    $('.navbar.footer').append('<div id="ncsbutton"></div>')
     $('#img').append('<div id="ncsmenu"></div>')
     $('#ncsmenu').append('<div id="ncsafk" class="menuitem">AFK Message</div>')
  
