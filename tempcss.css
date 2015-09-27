@@ -11,8 +11,15 @@
 }
 #ncsmenu {
     width: 300px;
-    padding: 25px;
-    border: 25px solid navy;
-    margin: 25px;
+    padding: 10px;
+    border-top-left-radius: 25px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    height: 300px;
+    z-index: 10;
+    position: fixed;
+    right: 400px;
+    bottom: 54px;
+    background-color: #141414;
 
 }
