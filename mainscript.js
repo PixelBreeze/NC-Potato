@@ -1,3 +1,5 @@
+var scktmsg = socket.onmessage;
+
 var colorR = '#00CEFF'; //color RDj
 var colorB = '#0058FF'; //color Bouncer
 var colorM = '#FF00F5'; //color Manager
@@ -8,6 +10,13 @@ var colorH = '#FF002D'; //color Host
   $('body').append('<style> .uname.rank-3 {color:' + colorM + ' !important} </style>')
   $('body').append('<style> .uname.rank-4 {color:' + colorCH + ' !important} </style>')
   $('body').append('<style> .uname.rank-5 {color:' + colorH + ' !important} </style>')
+  
+//socket.onmessage = function(e){scktmsg(e);e=JSON.parse(e.data);
+// if (e.text.indexOf("Pixel") > -1) {
+ //  API.sendChat("Sorry im AFK rightnow!");
+//  }
+//}
+
 
 
 
