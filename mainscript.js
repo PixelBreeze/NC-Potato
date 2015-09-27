@@ -13,7 +13,19 @@ var colorH = '#FF002D'; //color Host
   $('body').append('<style> .uname.rank-4 {color:' + colorCH + ' !important} </style>')
   $('body').append('<style> .uname.rank-5 {color:' + colorH + ' !important} </style>')
   //some more shiz
-  $('.navbar.footer').append(<div id="ncsbutton">NCS</div>)
+    $('.navbar.footer').append('<div id="ncsbutton">NCS</div>')
+    $('body').append('<div id="ncsmenu"></div>')
+    var e;
+    $('#ncsbutton').on('click',function(){
+    if (e==1) {
+    $('#ncsmenu').css('visibility', 'hidden');
+    e=0;
+    } else {
+    $('#ncsmenu').css('visibility', 'visible');
+    e=1;
+    }
+    })
+
 
 //socket.onmessage = function(e){scktmsg(e);e=JSON.parse(e.data);
 // if (e.text.indexOf("Pixel") > -1) {
