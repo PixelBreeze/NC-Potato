@@ -1,5 +1,5 @@
-var scktmsg = socket.onmessage;
 $('head').append('<link rel="stylesheet" href="https://rawgit.com/PixelBreeze/NC-Potato/master/tempcss.css" type="text/css"/>');
+var name = "@" + username;
 var afkscr = 0; //default value for afk script
 var colorR = '#00CEFF'; //color RDj
 var colorB = '#0058FF'; //color Bouncer
@@ -43,14 +43,10 @@ var colorH = '#FF002D'; //color Host
     }
     })
 
-
-socket.onmessage = function(e){scktmsg(e);e=JSON.parse(e.data);
-if (afkscr === 1) {
- if (e.text.indexOf("Pixel") > -1) {
-  API.sendChat("Sorry im AFK rightnow!");
-  }
- }
-}
+API.on(API.events.CHAT, function(data) {
+ if (afkscr === 1) {
+ if (data.message.indexOf(name) > -1) { 
+ API.sendChat("Yo @" + data.user.username + " be back soon...")}}})
 
 
 
