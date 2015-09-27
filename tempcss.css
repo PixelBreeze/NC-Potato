@@ -33,3 +33,13 @@
     border-bottom: 1px solid;
     
 }
+#akfc {
+    background-image: url("http://vignette4.wikia.nocookie.net/okami/images/f/f0/Check_mark.png/revision/latest?cb=20130520141819");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    margin-top: -17px;
+    margin-left: 170px;
+}
