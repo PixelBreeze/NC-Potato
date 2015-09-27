@@ -1,6 +1,6 @@
 var scktmsg = socket.onmessage;
 $('head').append('<link rel="stylesheet" href="https://rawgit.com/PixelBreeze/NC-Potato/master/tempcss.css" type="text/css"/>');
-
+var afkscr = 0; //default value for afk script
 var colorR = '#00CEFF'; //color RDj
 var colorB = '#0058FF'; //color Bouncer
 var colorM = '#FF00F5'; //color Manager
@@ -15,6 +15,8 @@ var colorH = '#FF002D'; //color Host
   //some more shiz
     $('.navbar.footer').append('<div id="ncsbutton">NCS</div>')
     $('body').append('<div id="ncsmenu"></div>')
+    $('#ncsmenu').append('<div class="menuitem">AFK Message</div>')
+    
     var e;
     $('#ncsbutton').on('click',function(){
     if (e==1) {
@@ -23,6 +25,21 @@ var colorH = '#FF002D'; //color Host
     } else {
     $('#ncsmenu').css('visibility', 'visible');
     e=1;
+    }
+    })
+
+    var afktoggle;
+    $('#ncsafk').on('click',function(){
+    if (afktoggle==1) {
+    afkscr = 0
+    $('#afkc').css('visibility', 'hidden');
+    afktoggle=0;
+    console.log('afk off');
+    } else {
+    afkscr = 1
+    console.log('afk on');
+    $('#afkc').css('visibility', 'visible');
+    afktoggle=1;
     }
     })
 
