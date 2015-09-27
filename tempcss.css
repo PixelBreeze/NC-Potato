@@ -9,6 +9,9 @@
     height: 50px;
     width: 55px;
     cursor: pointer;
+    background-image: url("http://i.imgur.com/OfSuTb9.png");
+    background-position: 5px;
+    background-repeat: no-repeat;
 }
 #ncsmenu {
     width: 300px;
