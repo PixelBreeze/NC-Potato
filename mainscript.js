@@ -1,4 +1,5 @@
 var scktmsg = socket.onmessage;
+$('head').append('<link rel="stylesheet" href="https://rawgit.com/PixelBreeze/NC-Potato/master/tempcss.css" type="text/css"/>');
 
 var colorR = '#00CEFF'; //color RDj
 var colorB = '#0058FF'; //color Bouncer
