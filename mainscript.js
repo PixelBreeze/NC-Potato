@@ -14,29 +14,29 @@ var colorH = '#FF002D'; //color Host
   $('body').append('<style> .uname.rank-5 {color:' + colorH + ' !important} </style>')
   //some more shiz
     $('.navbar.footer').append('<div id="ncsbutton">NCS</div>')
-    $('body').append('<div id="ncsmenu"></div>')
-    $('#ncsmenu').append('<div class="menuitem">AFK Message</div>')
-    
-    var e;
+    $('#img').append('<div id="ncsmenu"></div>')
+    $('#ncsmenu').append('<div id="ncsafk" class="menuitem">AFK Message</div>')
+ 
+    var menustatus;
     $('#ncsbutton').on('click',function(){
-    if (e==1) {
+    if (menustatus==1) {
     $('#ncsmenu').css('visibility', 'hidden');
-    e=0;
+    menustatus=0;
     } else {
     $('#ncsmenu').css('visibility', 'visible');
-    e=1;
+    menustatus=1;
     }
     })
 
     var afktoggle;
     $('#ncsafk').on('click',function(){
     if (afktoggle==1) {
-    afkscr = 0
+    afkscr = 0;
     $('#afkc').css('visibility', 'hidden');
     afktoggle=0;
     console.log('afk off');
     } else {
-    afkscr = 1
+    afkscr = 1;
     console.log('afk on');
     $('#afkc').css('visibility', 'visible');
     afktoggle=1;
@@ -44,11 +44,13 @@ var colorH = '#FF002D'; //color Host
     })
 
 
-//socket.onmessage = function(e){scktmsg(e);e=JSON.parse(e.data);
-// if (e.text.indexOf("Pixel") > -1) {
- //  API.sendChat("Sorry im AFK rightnow!");
-//  }
-//}
+socket.onmessage = function(e){scktmsg(e);e=JSON.parse(e.data);
+if (afkscr === 1) {
+ if (e.text.indexOf("Pixel") > -1) {
+  API.sendChat("Sorry im AFK rightnow!");
+  }
+ }
+}
 
 
 
