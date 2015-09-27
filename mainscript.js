@@ -1,5 +1,6 @@
 $('head').append('<link rel="stylesheet" href="https://rawgit.com/PixelBreeze/NC-Potato/master/tempcss.css" type="text/css"/>');
 var name = "@" + username;
+var AFKcooldown = true;
 var afkscr = 0; //default value for afk script
 var colorR = '#00CEFF'; //color RDj
 var colorB = '#0058FF'; //color Bouncer
@@ -16,6 +17,7 @@ var colorH = '#FF002D'; //color Host
     $('.navbar.footer').append('<div id="ncsbutton"></div>')
     $('#img').append('<div id="ncsmenu"></div>')
     $('#ncsmenu').append('<div id="ncsafk" class="menuitem">AFK Message</div>')
+    	$('#ncsafk').append('<div id="afkc"></div>')
  
     var menustatus;
     $('#ncsbutton').on('click',function(){
@@ -45,8 +47,17 @@ var colorH = '#FF002D'; //color Host
 
 API.on(API.events.CHAT, function(data) {
  if (afkscr === 1) {
- if (data.message.indexOf(name) > -1) { 
- API.sendChat("@" + data.user.username + " I'm AFK rightnow!")}}})
+  if (data.message.indexOf(name) > -1) { 
+   if (AFKcooldown === true) {
+    API.sendChat("@" + data.user.username + " I'm AFK rightnow!")
+    AFKcooldown = false;
+    setTimeout(function() {
+     AFKcooldown = true
+    }, 60000);
+   }
+  }
+ }
+})
 
 
 
