@@ -46,7 +46,7 @@ var colorH = '#FF002D'; //color Host
 API.on(API.events.CHAT, function(data) {
  if (afkscr === 1) {
  if (data.message.indexOf(name) > -1) { 
- API.sendChat("Yo @" + data.user.username + " be back soon...")}}})
+ API.sendChat("@" + data.user.username + " I'm AFK rightnow!")}}})
 
 
 
