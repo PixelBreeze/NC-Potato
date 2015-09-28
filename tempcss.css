@@ -43,3 +43,9 @@
     margin-top: -17px;
     margin-left: 170px;
 }
+.msg-del {
+    height: 20px;
+    Color: #FFFFFF;
+    background-color: rgba(255, 44, 44, 0.6);
+    margin-right: 20px;
+}
