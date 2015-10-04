@@ -2,7 +2,6 @@
     border-left-style: solid;
     border-right-style: solid;
     border-width: 1px;
-    text-align: center;
     position: fixed;
     right: 400px;
     padding-top: 1px;
@@ -16,9 +15,9 @@
 #ncsmenu {
     width: 200px;
     padding: 10px;
-    border-top-left-radius: 25px;
-    border-top: 2px solid;
-    border-left: 2px solid;
+    border-top-left-radius: 6px;
+    border-top: 1px solid;
+    border-left: 1px solid;
     height: 100px;
     z-index: 10;
     position: fixed;
