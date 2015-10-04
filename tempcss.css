@@ -11,6 +11,7 @@
     background-image: url("http://i.imgur.com/OfSuTb9.png");
     background-position: 5px;
     background-repeat: no-repeat;
+    -webkit-user-select: none;
 }
 #ncsmenu {
     width: 200px;
@@ -24,12 +25,14 @@
     right: 400px;
     bottom: 54px;
     background-color: #141414;
+    -webkit-user-select: none;
 }
 .menuitem { 
     cursor: pointer;
     padding-bottom: 10px;
     padding-top: 10px;
     border-bottom: 1px solid;
+    -webkit-user-select: none;
     
 }
 #afkc {
