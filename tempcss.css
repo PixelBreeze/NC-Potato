@@ -54,3 +54,15 @@
 #issues {
     margin-right: 60px;
 }
+
+#afkprompt {
+    left: 455px;
+    top: 400px;
+    width: 600px;
+    border: 1px solid;
+    height: 250px;
+    z-index: 10;
+    position: fixed;
+    background-color: #141414;
+    -webkit-user-select: none;
+}
